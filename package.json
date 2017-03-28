@@ -1,0 +1,15 @@
+{
+  "name": "rsgtechs-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RSG technician search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'No test script defined' && exit 1"
+  },
+  "author": "Alyssa Hung <ahung@isisview.org>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}

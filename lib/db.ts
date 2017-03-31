@@ -1,14 +1,7 @@
 /** @module lib/db */
 import Config from "../config";
 import { MysqlDriver } from "./db-drivers/mysql";
-
-var debug: any;
-if (Config.dbDebug) {
-	debug = console.log.bind(console);
-}
-else {
-	debug = () => {};
-}
+import { debug } from "./util";
 
 /**
  * Common signature for callback functions.

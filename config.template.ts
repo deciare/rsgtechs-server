@@ -5,7 +5,7 @@ class AppConfig {
 	dbName: string = "database";
 	dbUsername: string = "username";
 	dbPassword: string = "password";
-	dbDebug: boolean = false;
+	debug: boolean = false;
 }
 
 var config: AppConfig = new AppConfig();

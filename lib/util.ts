@@ -1,4 +1,13 @@
 /** @module lib/util */
+import Config from "../config";
+
+export var debug: any;
+if (Config.debug) {
+	debug = console.log.bind(console);
+}
+else {
+	debug = () => {};
+}
 
 /**
  * Checks whether the given value is an integer greater than or equal to 1.

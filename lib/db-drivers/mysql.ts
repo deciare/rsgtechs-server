@@ -3,14 +3,7 @@ import * as Mysql from 'mysql';
 
 import Config from "../../config";
 import { ICallback, IDriver } from "../db";
-
-var debug: any;
-if (Config.dbDebug) {
-	debug = console.log.bind(console);
-}
-else {
-	debug = () => {};
-}
+import { debug } from "../util";
 
 /**
  * Wrapper for node-mysql. Provides consistent method signatures and return

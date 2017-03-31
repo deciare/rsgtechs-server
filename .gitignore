@@ -1,1 +1,8 @@
 node_modules/
+lib/db-drivers/*.js
+lib/*.js
+routes/*.js
+index.js
+config.js
+config.ts
+config.template.js

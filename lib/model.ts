@@ -1,4 +1,5 @@
 /** @module lib/model */
+import { debug } from "./util";
 
 /**
  * Class modelling the most basic JSON object returned by this application.
@@ -8,9 +9,22 @@ export class Base {
 	success: boolean;
 	error: string;
 
-	constructor(success: boolean, error?: string) {
+	constructor(success: boolean, error?: any) {
 		this.success = success;
-		this.error = error;
+		if (error !== undefined) {
+			debug(error);
+			if (error instanceof Error) {
+				// TODO: proper logging of stack traces somewhere not visible to
+				// the end user.
+				this.error = error.message;
+			}
+			else if (typeof error !== "string") {
+				this.error = error.toString();
+			}
+			else {
+				this.error = error;
+			}
+		}
 	}
 }
 
